@@ -1,3 +1,38 @@
+[project]
+name = "zipvoice"
+version = "0.1.0"
+description = "Fast and High-Quality Zero-Shot Text-to-Speech with Flow Matching"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+dependencies = [
+    "torch",
+    "torchaudio",
+    "numpy",
+    "lhotse",
+    "huggingface_hub",
+    "safetensors",
+    "vocos",
+    "pydub",
+    "cn2an",
+    "inflect",
+    "jieba",
+    "piper-phonemize",
+    "pypinyin",
+    "setuptools<81",
+]
+
+[project.optional-dependencies]
+eval = [
+    "tensorboard",
+]
+
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["zipvoice*"]
+
 [tool.isort]
 profile = "black"
 
